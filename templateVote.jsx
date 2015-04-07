@@ -18,9 +18,12 @@ var voteListReact = new React.createClass({
 	componentDidMount: function(){
 		var self = this;
 		Tracker.autorun(function(){
+			var vote = [];
 			var big = Session.get("big");
 			if(big && big[0]){
-				vote = Vote.find({"imageId": big[0]._id}).fetch();
+				var wi = WI.findOne(big[0]._id);
+				if(wi && wi.inbox)
+					vote = wi.inbox;//Vote.find({"imageId": big[0]._id}).fetch();
 				self.setState({vote: vote})
 			}
 			// var user = WI.findOne({
