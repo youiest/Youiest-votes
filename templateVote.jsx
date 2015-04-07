@@ -4,7 +4,7 @@ var voteListReact = new React.createClass({
 	getInitialState: function(){
 		var vote = [];
 
-		// var user = Meteor.users.findOne({
+		// var user = WI.findOne({
 		// 	"_id": userId,
 		// });
 		// var imageId = Session.get("imageId");
@@ -23,7 +23,7 @@ var voteListReact = new React.createClass({
 				vote = Vote.find({"imageId": big[0]._id}).fetch();
 				self.setState({vote: vote})
 			}
-			// var user = Meteor.users.findOne({
+			// var user = WI.findOne({
 			// 	"_id": userId,
 			// });
 			// var imageId = Session.get("imageId");
