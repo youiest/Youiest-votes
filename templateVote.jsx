@@ -94,9 +94,10 @@ var voteReact = new React.createClass({
 				left: vote.XP +"%", 
 				top: vote.YP +"%"
 			}
-			return( 
-				<img className="ui small images vote" style={style} src={this.props.vote.profile_picture} onClick={this.onClickvote}/>
-			)
+			return React.DOM.img( {className:"ui small images vote", style:style, src:this.props.vote.profile_picture, onClick:this.onClickvote});
+			// return( 
+			// 	<img className="ui small images vote" style={style} src={this.props.vote.profile_picture} onClick={this.onClickvote}/>
+			// )
 	}
 });
 Vote.voteReact = voteReact;
