@@ -14,7 +14,7 @@ Package.on_use(function (api) {
     'deps',
     'tracker',
     'session',
-    'pedrohenriquerls:reactjs',
+    'reactjs:react',
     'mongo',
     ], ['client', 'server']);
 
@@ -66,7 +66,7 @@ Package.on_test(function (api) {
       'accounts-password', 
       'underscore', 
       'random', 
-      'pedrohenriquerls:reactjs',
+      'reactjs:react',
       'mongo'
     ], 
     [

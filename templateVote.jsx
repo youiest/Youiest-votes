@@ -54,7 +54,7 @@ var voteListReact = new React.createClass({
 		var self = this;
 		// console.log(this.state.vote)
 		votelist = this.state.vote.map(function(vote){
-			return <voteReact vote={vote} onClickvote={self.onClickvote}/>
+			return <VoteReact vote={vote} onClickvote={self.onClickvote}/>
 		})
 		// if(this.state.vote.length != 0)
 		// 	return votelist;
@@ -80,7 +80,7 @@ var voteListReact = new React.createClass({
 });
 Vote.voteListReact = voteListReact;
 
-var voteReact = new React.createClass({
+var VoteReact = new React.createClass({
 	"onClickvote": function(){
 		this.props.onClickvote(this.props.vote);
 		Session.set("voteId",this.props.vote._id);
@@ -100,9 +100,9 @@ var voteReact = new React.createClass({
 			// )
 	}
 });
-Vote.voteReact = voteReact;
+Vote.VoteReact = VoteReact;
 
 Template.votePackage.rendered = function(){
 	// React.renderComponent(<voteListReact />, document.getElementById('votePackage'));
-	React.renderComponent(<bigReact />, document.getElementById('bigPackage'));
+	React.renderComponent(<BigReact />, document.getElementById('bigPackage'));
 }
